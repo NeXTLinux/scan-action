@@ -1,8 +1,8 @@
 # GitHub Action for Vulnerability Scanning
 
 [![Test Status][test-img]][test]
-[![GitHub release](https://img.shields.io/github/release/anchore/scan-action.svg)](https://github.com/anchore/scan-action/releases/latest)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/anchore/scan-action/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/nextlinux/scan-action.svg)](https://github.com/nextlinux/scan-action/releases/latest)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/nextlinux/scan-action/blob/main/LICENSE)
 [![Slack Invite](https://img.shields.io/badge/Slack-Join-blue?logo=slack)](https://anchore.com/slack)
 
 :zap: _Find threats in files or containers at lightning speed_ :zap:
@@ -54,7 +54,7 @@ The simplest workflow for scanning a `localbuild/testimage` container:
     load: true
 
 - name: Scan image
-  uses: anchore/scan-action@v3
+  uses: nextlinux/scan-action@v3
   with:
     image: "localbuild/testimage:latest"
 ```
@@ -65,7 +65,7 @@ To scan a directory, add the following step:
 
 ```yaml
 - name: Scan current project
-  uses: anchore/scan-action@v3
+  uses: nxtlinux/scan-action@v3
   with:
     path: "."
 ```
@@ -97,7 +97,7 @@ With a different severity level:
 
 ```yaml
 - name: Scan image
-  uses: anchore/scan-action@v3
+  uses: nextlinux/scan-action@v3
   with:
     image: "localbuild/testimage:latest"
     fail-build: true
@@ -108,7 +108,7 @@ Optionally, change the `fail-build` field to `false` to avoid failing the build 
 
 ```yaml
 - name: Scan image
-  uses: anchore/scan-action@v3
+  uses: nextlinux/scan-action@v3
   with:
     image: "localbuild/testimage:latest"
     fail-build: false
@@ -152,7 +152,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build the container image
         run: docker build . --file Dockerfile --tag localbuild/testimage:latest
-      - uses: anchore/scan-action@v3
+      - uses: nextlinux/scan-action@v3
         with:
           image: "localbuild/testimage:latest"
           fail-build: true
@@ -217,20 +217,20 @@ Output parameters:
 Example usage:
 
 ```yaml
-- uses: anchore/scan-action/download-grype@v3
+- uses: nextliniux/scan-action/download-grype@v3
   id: grype
 - run: ${{steps.grype.outputs.cmd}} dir:.
 ```
 
 ## Contributing
 
-We love contributions, feedback, and bug reports. For issues with the invocation of this action, file [issues](https://github.com/anchore/scan-action/issues) in this repository.
+We love contributions, feedback, and bug reports. For issues with the invocation of this action, file [issues](https://github.com/nextlinux/scan-action/issues) in this repository.
 
 For contributing, see [Contributing](CONTRIBUTING.md).
 
 ## More Information
 
-For documentation on Grype itself, including other output capabilities, see the [grype project](https://github.com/anchore/grype)
+For documentation on Grype itself, including other output capabilities, see the [grype project](https://github.com/nextlinux/grype)
 
 Connect with the community directly on [slack](https://anchore.com/slack).
 

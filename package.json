@@ -1,7 +1,7 @@
 {
-  "name": "anchore-scan-action",
+  "name": "nextlinux-scan-action",
   "version": "2.0.2",
-  "description": "Anchore image scan github action",
+  "description": "Nextlinux image scan github action",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anchore/anchore-scan-action.git"
+    "url": "git+https://github.com/nextlinux/nextlinux-scan-action.git"
   },
   "keywords": [
     "image",
@@ -29,9 +29,9 @@
   "author": "Anchore Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anchore/anchore-scan-action/issues"
+    "url": "https://github.com/nextlinux/nextlinux-scan-action/issues"
   },
-  "homepage": "https://github.com/anchore/anchore-scan-action#readme",
+  "homepage": "https://github.com/nextlinux/nextlinuxe-scan-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",

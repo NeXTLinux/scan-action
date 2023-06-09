@@ -2,8 +2,6 @@
 
 ## Version 2.0.2 - 2020-11-11
 
-* Update `actions/core` to use version `1.2.6` [(Issue #71)](https://github.com/anchore/scan-action/issues/71)
-
 ## Version 2.0.1 - 2020-02-11
 
 Fixes:
